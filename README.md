@@ -91,5 +91,41 @@ rbenv rehash
 
 after installing bundler.
 
+## Installing Nginx
+
+```
+sudo apt-get install nginx
+```
+
+So now we have Nginx installed, and we can start the Nginx webserver by using the service command:
+
+```
+sudo service nginx start
+```
+
+The service command also provides some other methods such as restart and stop that allow you to easily restart and stop your webserver.
+
+
+## PostgreSQL Database Setup
+
+All you need to do in order to install PostgreSQL is to run the following command:
+
+```
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+```
+
+Next we need to setup our postgres user:
+
+```
+sudo su - postgres
+createuser --your_user
+exit
+```
+
+The password you type in here will be the one to put in your my_app/current/config/database.yml later when you deploy your app for the first time.
+
+
+
+
 
 

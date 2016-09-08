@@ -43,18 +43,17 @@ $ ssh-copy-id -i ~/.ssh/id_rsa.pub deployer@xxx.xxx.xxx.xxx
 Now you can access to server:
 
 ```
-$ ssh root@xxx.xxx.xxx.xxx
+$ ssh deploy@xxx.xxx.xxx.xxx
 ```
 
 ## Installing Ruby
 
-```
+
 The first step is to install some dependencies for Ruby.
 
 ```
 sudo apt-get update
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
-
 ```
 
 Installing with rbenv is a simple two step process. First you install rbenv, and then ruby-build:
@@ -73,7 +72,6 @@ exec $SHELL
 rbenv install 2.3.1
 rbenv global 2.3.1
 ruby -v
-
 ```
 
 Tell Rubygems not to install the documentation locally, and then install bundler
@@ -84,14 +82,13 @@ echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 ```
 gem install bundler
-
 ```
 and run
 
 ```
 rbenv rehash
-
 ```
+
 after installing bundler.
 
 

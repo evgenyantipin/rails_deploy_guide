@@ -211,7 +211,7 @@ after "deploy:cleanup", "unicorn:restart"
 Unicorn namespace need to do in order for restart unicorn server after deploy automatically, or we can do this with a special command:
 
 ```
-$ cap production unicorn:restart - restart unicorn
+$ cap production unicorn:restart
 $ cap production unicorn:start
 $ cap production unicorn:stop
 ```
